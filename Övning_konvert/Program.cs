@@ -1,4 +1,6 @@
-﻿namespace Övning_konvert
+﻿using System.Globalization;
+
+namespace Övning_konvert
 {
     internal class Program
     {
@@ -35,22 +37,54 @@
 
 
             // Ö3
-            Random number1 = new Random();
-            int number2 = number1.Next(1, 6);
+            //string choice = "";
 
-            while(true)
-            {
-
-            }
-            Console.WriteLine(number2);
-
-            // Random
-            //Random ran = new Random();
-            //int number = ran.Next(1, 11);
-
-            //Console.WriteLine(number);
+            //while (choice != "q")
+            //{
+            //    Random number1 = new Random();
+            //    int number2 = number1.Next(1, 7);
+            //    Console.WriteLine(number2);
+            //    Console.WriteLine("Tryck enter för att slå igen och skriv q för att avsluta!");
+            //    choice = Console.ReadLine();
+            //}
 
 
+
+            // Nivå 2
+            // Ö5
+            //try
+            //{
+            //    Console.WriteLine("Skriv första numret!");
+            //    double number1 = double.Parse(Console.ReadLine());
+
+            //    Console.WriteLine("Skriv andra numret!");
+            //    double number2 = double.Parse(Console.ReadLine());
+
+            //    Console.WriteLine("Skriv ett räknesätt!");
+            //    char op = char.Parse(Console.ReadLine());
+
+            //    double result = op switch
+            //    {
+            //        '+' => number1 + number2,
+            //        '-' => number1 - number2,
+            //        '*' => number1 * number2,
+            //        '/' => number1 / number2,
+            //        _ => throw new Exception("Okänt räknesätt")
+            //    };
+            //    Console.WriteLine(result);
+            //}
+            //catch (DivideByZeroException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+
+
+            // Ö6
 
 
 
