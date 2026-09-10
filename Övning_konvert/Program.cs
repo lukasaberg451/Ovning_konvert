@@ -27,7 +27,7 @@ namespace Övning_konvert
 
             //if (isConverted)
             //{
-            //    Console.WriteLine("Bra");
+            //    Console.WriteLine($"Du skrev in: {number}");
             //}
             //else
             //{
@@ -38,11 +38,11 @@ namespace Övning_konvert
 
             // Ö3 Tärningskastare
             //string choice = "";
+            //Random number1 = new Random();
 
             //while (choice != "q")
             //{
-            //    Random number1 = new Random();
-            //    int number2 = number1.Next(1, 6);
+            //    int number2 = number1.Next(1, 7);
             //    Console.WriteLine(number2);
             //    Console.WriteLine("Tryck enter för att slå igen och skriv q för att avsluta!");
             //    choice = Console.ReadLine();
@@ -68,7 +68,7 @@ namespace Övning_konvert
             //        '+' => number1 + number2,
             //        '-' => number1 - number2,
             //        '*' => number1 * number2,
-            //        '/' => number1 / number2,
+            //        '/' => number2 != 0 ? number1 / number2 : throw new DivideByZeroException("Kan inte dividera med noll"),
             //        _ => throw new Exception("Okänt räknesätt")
             //    };
             //    Console.WriteLine(result);
@@ -86,7 +86,7 @@ namespace Övning_konvert
 
             // Ö6 Gissa talet
             //Random number1 = new Random();
-            //int randomNumber = number1.Next(1, 100);
+            //int randomNumber = number1.Next(1, 101);
             //int userGuess = 0;
             //int attemps = 0;
 
@@ -108,8 +108,8 @@ namespace Övning_konvert
 
 
 
-            //// Ö7 var vs dynamic. This is one program, please uncomment the full code before running.
-            //// VAR: var is decided at compile time and cannot change thereafter. If an int is declared it will forever be an int in the program.
+            // Ö7 var vs dynamic. This is one program, please uncomment the full code before running.
+            // VAR: Type is decided at compile time and cannot change thereafter. If an int is declared it will forever be an int in the program.
             //var varName = "Lukas";
             //var varAge = 27;
             //var varNumber = 19.99;
@@ -144,6 +144,95 @@ namespace Övning_konvert
             //Console.WriteLine(result2);
 
 
+
+            // Nivå 3
+            // Ö9 Robust registreringssystem
+            //try
+            //{
+            //    // Collect name
+            //    Console.WriteLine("vad heter du?");
+            //    string name = Console.ReadLine();
+
+            //    // Collect age and validate it
+            //    Console.WriteLine("Hur gammal är du?");
+            //    if (!int.TryParse(Console.ReadLine(), out int age))
+            //    {
+            //        Console.WriteLine("Ogiltig ålder, skriv ett heltal");
+            //        return;
+            //    }
+            //    if (age < 0 || age > 120)
+            //    {
+            //        throw new InvalidAgeException("Ålders måste vara mellan 0 och 120");
+            //    }
+
+            //    // Collect salary and validate it
+            //    Console.WriteLine("Vad är din lön?");
+            //    if (!double.TryParse(Console.ReadLine(), out double salary))
+            //    {
+            //        Console.WriteLine("Ogiltig lön, skriv ett tal");
+            //        return;
+            //    }
+
+            //    // Write the info back to the user
+            //    Console.WriteLine($"Dina uppgifter: {name}, {age}, {salary}");
+            //}
+            //catch (InvalidAgeException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+
+
+            // Ö10 Slumpgenererat quiz
+            //    Random randomNumber = new Random();
+            //    int correctAnswers = 0;
+
+
+            //    for (int i = 0; i < 5; i++)
+            //    {
+            //        int a = randomNumber.Next(1, 11);
+            //        int b = randomNumber.Next(1, 11);
+            //        int correctAnswer = a * b;
+
+            //        Console.WriteLine($"Fråga {i + 1}: Vad är {a} * {b}?");
+
+            //        if (!int.TryParse(Console.ReadLine(), out int userAnswer))
+            //        {
+            //            Console.WriteLine("Fel, ogiltig inmatning");
+            //            continue;
+            //        }
+
+            //        if (userAnswer == correctAnswer)
+            //        {
+            //            correctAnswers++;
+            //            Console.WriteLine("Rätt");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine($"Fel, rätt svar var {correctAnswer}");
+            //        }
+            //    }
+
+            //    Console.WriteLine($"Du fick {correctAnswers} av 5 rätt");
+
+            // Ö12 Felsökningsutmaning
+            // I do not see any issues here. Its hard to know what to look for when you dont explain what the goal of the code is.
+            // There is no errors or warning, and it is running fine.
+            //int[] tal = { 5, 10, 15, 20 };
+            //int summa = 0;
+            //for (int i = 0; i < tal.Length; i++)
+            //    summa += tal[i];
+            //double medel = (double)summa / tal.Length;
+            //Console.WriteLine($"Medel: {medel}");
         }
     }
+    // Method for a custom exception for Ö9
+    public class InvalidAgeException : Exception 
+    {
+        public InvalidAgeException(string message) : base(message) {}
+    } 
 }
